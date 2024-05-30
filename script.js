@@ -1,18 +1,3 @@
-//預先載入全部圖片
-var imgPreloadArr = new Array();
-function frontendPreload(){
-  for (let i= 0; i < frontendPreload.arguments.length; i++){
-    imgPreloadArr[i] = new Image();
-    imgPreloadArr[i].src = frontendPreload.arguments[i];
-  }
-}
-frontendPreload("photo/A_1_right.png","photo/A_3_right.png","photo/A_2_right.png","photo/A_1_left.png","photo/A_3_left.png",
-"photo/A_2_left.png","photo/B.png","photo/D.png","photo/Dead.png","photo/dialogue.png","photo/E.png","photo/chapter.png",
-"photo/cover.png","photo/FirstScenes.png","photo/happy.png","photo/house.png","photo/Inventory.png",
-"photo/M.png","photo/mansion.png","photo/max.png","photo/middle.png","photo/min.png","photo/Normalbridge.png",
-"photo/One.png","photo/oneeye.png","photo/Press.png","photo/PrologueScenes.png","photo/Redbridge.png",
-"photo/Title.png","photo/trouble.png","photo/twoeye.png","photo/w_1.png","photo/w_2.png","photo/w_3.png",
-"photo/whistle.png","photo/Zero.png")
 //延遲器(雖然感覺沒有效果)
 function delay(n){
   return new Promise(function(resolve){
