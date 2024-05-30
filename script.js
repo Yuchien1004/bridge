@@ -1,3 +1,18 @@
+//預先載入全部圖片
+var imgPreloadArr = new Array();
+function frontendPreload(){
+  for (let i= 0; i < frontendPreload.arguments.length; i++){
+    imgPreloadArr[i] = new Image();
+    imgPreloadArr[i].src = frontendPreload.arguments[i];
+  }
+}
+frontendPreload("photo/A_1_right.png","photo/A_3_right.png","photo/A_2_right.png","photo/A_1_left.png","photo/A_3_left.png",
+"photo/A_2_left.png","photo/B.png","photo/D.png","photo/Dead.png","photo/dialogue.png","photo/E.png","photo/chapter.png",
+"photo/cover.png","photo/FirstScenes.png","photo/happy.png","photo/house.png","photo/Inventory.png",
+"photo/M.png","photo/mansion.png","photo/max.png","photo/middle.png","photo/min.png","photo/Normalbridge.png",
+"photo/One.png","photo/oneeye.png","photo/Press.png","photo/PrologueScenes.png","photo/Redbridge.png",
+"photo/Title.png","photo/trouble.png","photo/twoeye.png","photo/w_1.png","photo/w_2.png","photo/w_3.png",
+"photo/whistle.png","photo/Zero.png")
 //延遲器(雖然感覺沒有效果)
 function delay(n){
   return new Promise(function(resolve){
@@ -37,6 +52,8 @@ const talk = document.getElementById("talk");
 const rn = document.getElementById("rn");
 const Name = document.getElementById("name")
 const end = document.getElementById("end")
+const inventory = document.getElementById("inventory")
+const hungry = document.getElementById("hungry")
 speed = 3;
 function Tochapter(e){
   var e = e||window.event;
@@ -174,6 +191,8 @@ function start(i){
       blackscreen.style.backgroundColor = 'rgb(0, 0, 0, 0)';
       ruleone.style.display = "block"
       dialogue.style.display = "block"
+      hungry.style.display = "block"
+      inventory.style.display = "block"
       setTimeout(function(){
         blackscreen.style.display = "none";
       },2000);
@@ -232,6 +251,8 @@ function main(){
       dialogue.style.display = "none";
       ruleone.style.display = "none";
       ruletwo.style.display = "none";
+      hungry.style.display = "block"
+      inventory.style.display = "block"
       rn.style.display = "none";
       chapter.style.display = "block";
       Prologue.style.display = "block";
