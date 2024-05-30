@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+body{
+    overflow: hidden;
+    background-color: #000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("photo/cover.PNG");
+    font-family: "Noto Sans TC", sans-serif;
+}
+/*框架*/
+.workarea{
+    width: 100vw;
+    height: 100vh;
+    z-index: 16;
+}
+#blackscreen{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0);
+    text-align:center;
+    top: 0%;
+    left: 0%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    z-index: 50;
+    transition: background-color 2s ease;
+}
+#Press{
+    width: 30vw;
+    height: 10vw;
+    position: fixed;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    left: 30vw;
+    top: 81%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("photo/Press.png");
+    animation: fly 3s forwards;
+}
+#face{
+    width: 5vw;
+    height: 5vw;
+    position: fixed;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    left: 76vw;
+    top: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("photo/happy.png");
+    animation: flash 20s ease infinite normal;
+}
+#Title{
+    width: 30vw;
+    height: 30vw;
+    position: fixed;
+    display: block;
+    padding: 0px;
+    left: 13vw;
+    top: 55%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("photo/Title.png");
+    animation: fall 3s forwards;
+}
+@keyframes fall {
+    0%{top: -70%;}
+    20%{top: 55%;}
+    70%{top: 30%;}
+    100%{top: 55%;}
+}
+@keyframes fly {
+    0%{left: 100vw;}
+    50%{left: -100vw;}
+    100%{left: 35vw;}
+}
+@keyframes flash {
+    0%{background-image: url("photo/happy.png");left: 76vw;top: 20%;opacity: 1;}
+    74%{background-image: url("photo/happy.png");left: 76vw;top: 20%;opacity: 1;}
+    75%{background-image: url("photo/trouble.png");}
+    80%{background-image: url("photo/trouble.png");}
+    82%{top: 100%;left: 0vw;}
+    83%{opacity: 0;}
+    84%{opacity:0;left: 76vw;top: 20%;}
+    85%{opacity: 1;}
+    90%{background-image: url("photo/oneeye.png");}
+    95%{background-image: url("photo/twoeye.png");}
+    100%{background-image: url("photo/happy.png");}
+}
+#chapter{
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    padding: 0px;
+    margin: 0px;
+    left: 0%;
+    position: fixed;
+    display: none;
+    z-index: 18;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-image: url("photo/chapter.png");
+}
+.chapterc{
+    width: 20vw;
+    height: 20vw;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    display: none;
+    z-index: 19;
+    font-size: 100px;
+    color: #fff;
+    background-color: #000;
+    transition: all 0.5s ease 0s;
+}
+#Prologue{
+    left: 10%;
+    top: 10%;
+    background-size: 20vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("photo/Zero.png");
+}
+#First{
+    left: 40%;
+    top: 10%;
+    background-size: 20vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("photo/One.png");
+}
+#dialogue{
+    width: 100vw;
+    height: 15vh;
+    position: fixed;
+    display: none;
+    top: 85%;
+    color: #fff;
+    background-size: 1500px 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:0px auto;
+    z-index: 15;
+    background-image: url("photo/dialogue.png");
+}
+#talk{
+    user-select: none;
+    font-size: 25px;
+    margin-left: 10%;
+}
+#inventory{
+    width: 260px;
+    height: 90px;
+    position: absolute;
+    display: none;
+    left: 83%;
+    top: 73%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("photo/Inventory.png");
+}
+#hungry{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    display: none;
+    left: 79%;
+    top: 73%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("photo/max.png");
+}
+.rule{
+    position: absolute;
+    display: none;
+    z-index: 18;
+    width: 40px;
+    height: 96px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#rn{
+    user-select: none;
+    position: relative;
+    width: 5vw;
+    height: 60px;
+    line-height:60px;
+    top: 90%;
+    position: absolute;
+    display: none;
+    z-index: 18;
+    font-size: 25px;
+    color: #fff;
+    border: 3px #fff solid;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#ruleone{
+    background-image: url("photo/A_3_right.PNG");
+    top: 57vh;
+    left: 0%;
+}
+#ruletwo{
+    width: 50px;
+    height: 120px;
+    top: 57vh;
+    left: 47vw;
+}
+#end{
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 20vh;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 51;
+    text-align: center;
+    top: 50%;
+}
+.chapterc:hover{border: 10px #BA2737 solid ;transform: scale(1.05)}
